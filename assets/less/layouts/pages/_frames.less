@@ -1,0 +1,71 @@
+.specs-table {
+    margin-top: 10px;
+}
+
+h1,
+h2 {
+	color: @blue;
+}
+h2 span {
+	font-weight: 300;
+	sup {
+		top: -0.25em;
+	}
+}
+
+.specs-table > tbody > tr > td {
+	position: relative;
+    border: 0;
+    padding: 5px 0 0 0;
+    border-bottom: 1px dotted #999;
+
+	div {
+	    background: #fff;
+	    margin-bottom: -5px;
+	    float: left;
+	    padding-bottom: 2px;
+	}
+
+	&:last-of-type div {
+	    text-align: right;
+	    float: right;
+	}
+}
+
+.handbuilt {
+	display: block;
+	background: url(/wp-content/themes/roots-master/assets/img/made-in-mass.png) no-repeat 0 0;
+	height: 43px;
+	padding-left: 53px;
+	line-height: 43px;
+}
+
+.frame-icon {
+	float: right;
+}
+
+.gallery-main {
+	position: relative;
+	padding-top: 65%;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		top: 0;
+
+		&:first-of-type {
+			z-index: 5;
+		}
+	}
+}
+
+.thumbnail-area > div div {
+	cursor: pointer;
+	opacity: .6;
+	transition: opacity .3s ease-in-out;
+	margin-bottom: 30px;
+
+	&:hover {
+		opacity: 1;
+	}
+}

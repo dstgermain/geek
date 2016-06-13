@@ -1,0 +1,89 @@
+#grid[data-columns]::before {
+	content: '3 .column.size-1of3';
+}
+@media (min-width: 768px) {
+	.column { float: left; }
+	.size-1of3 { width: 33.333%; }
+}
+
+#grid article {
+	padding: .5em;
+
+	h2.entry-title.margin_0 {
+		margin-bottom: 10px;
+		font-size: 22px;
+		font-weight: 700;
+	}
+
+	time {
+		color: #999;
+		font-style: italic;
+	}
+
+	p {
+		line-height: 1.6em;
+	}
+
+	a {
+		.single {
+			background: #fff;
+			transition: background .2s ease-out;
+			box-shadow: 0 0 5px rgba(0,0,0,.2);
+
+			h2 a {
+				word-wrap: break-word;
+			}
+		}
+
+		header {
+			padding: 1em 1em 0;
+		}
+
+		.entry-summary {
+			padding: 0 1em 1em;
+			color: #333;
+		}
+
+		&:hover {
+			text-decoration: none;
+
+			.single {
+				background: #f0f0f0;
+			}
+		}
+	}
+}
+#grid.loading:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 25px;
+	background-image: url("/wp-content/themes/roots-master/assets/img/ajax-loading.gif");
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+#grid.end-of-the-rad:after {
+	content: "End of the Road.";
+	display: block;
+	width: 100%;
+	height: 25px;
+	text-align: center;
+}
+
+#posts-content {
+	min-height: 500px;
+
+	.thumb img {
+		width: 100%;
+	}
+}
+
+.single-post {
+	img {
+		.thumbnail;
+		display: block;
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+	}
+}

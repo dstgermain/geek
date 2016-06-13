@@ -1,0 +1,68 @@
+// Content wrapper
+.wrap { }
+
+//variables
+@blue: #20bcef;
+@base-grey: #555555;
+@lt-grey: #f0f0f0;
+@md-grey: #888888;
+@yellow: #efe820;
+@green: #6eef20;
+@purple: #960e94;
+
+//globals
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: @base-grey;
+}
+
+a {
+	color: @blue;
+	transition: color ease-in-out .3s;
+
+	&:hover {
+		color: darken(@blue, 25%);
+	}
+}
+
+.margin-bottom_30 {
+	margin-bottom: 30px;
+}
+
+.margin-bottom_15 {
+	margin-bottom: 15px;
+}
+
+.margin-top_30 {
+	margin-top: 30px;
+}
+
+.margin-top_60 {
+	margin-top: 60px;
+}
+
+.margin-top_125 {
+	margin-top: 125px;
+}
+
+.margin_0 {
+	margin: 0;
+}
+
+@media (max-width:767px) {
+	.margin-bottom-xs_30 {
+		margin-bottom: 30px;
+	}
+}
+
+//setting a max width so the page doesn't get out of control
+.container-fluid {
+	max-width: 1170px;
+	padding: 0 30px;
+}
+
+//just incase
+.full-width {
+	width: 100%;
+}

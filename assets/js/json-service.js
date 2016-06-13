@@ -116,11 +116,11 @@ geek.service("getJSON", function($q, $http) {
         },
         getInstagram: function() {
             var deferred = $q.defer();
-            var endPoint = "https://api.instagram.com/v1/users/31741476/media/recent?client_id=24a6152f4faa4f0e80016e0f526529c2&callback=JSON_CALLBACK";
+            var endPoint = "https://api.instagram.com/v1/users/31741476/media/recent?access_token=40066797.24a6152.498a62d28179413a89099a4654537c2f&callback=JSON_CALLBACK";
 
             $http.jsonp(endPoint).success(function(response) {
-                console.log(response.data);
-                deferred.resolve(response.data);
+                console.log(response);
+                deferred.resolve(response.data || []);
             });
 
             return deferred.promise;

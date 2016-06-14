@@ -63,7 +63,7 @@ geek.controller("home", function($scope, $sce, getJSON){
 			return rv;
 		}
 		$scope.insta = toObject(data);
-		$scope.loadedInsta = true;
+		$scope.loadedInsta = Boolean(data.length);
 	});
 
 	//home page

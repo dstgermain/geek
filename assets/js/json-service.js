@@ -120,7 +120,8 @@ geek.service("getJSON", function($q, $http) {
 
             $http.jsonp(endPoint).success(function(response) {
                 if (response.meta.code !== '200') {
-                    deferred.resolve([]); return;
+                    deferred.resolve([]);
+                    return;
                 }
                 deferred.resolve(response.data);
             });

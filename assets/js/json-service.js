@@ -116,7 +116,7 @@ geek.service("getJSON", function($q, $http) {
         },
         getInstagram: function() {
             var deferred = $q.defer();
-            var endPoint = "https://api.instagram.com/v1/users/31741476/media/recent?access_token=40066797.24a6152.498a62d28179413a89099a4654537c2f&callback=JSON_CALLBACK";
+            var endPoint = "https://api.instagram.com/v1/users/31741476/media/recent?access_token=31741476.1677ed0.192d51207a9b4359a840cbb76eb8a002&callback=JSON_CALLBACK";
 
             $http.jsonp(endPoint).success(function(response) {
                 if (response.meta.code !== '200') {
